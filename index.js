@@ -142,7 +142,7 @@ app.post("/api/voice-detection", async (req, res) => {
         });
     }
     try {
-        const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY; });
+        const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY });
         const response = await ai.models.generateContent({
             model: "gemini-3-flash-preview",
             contents: {
