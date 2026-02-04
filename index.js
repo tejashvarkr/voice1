@@ -34,7 +34,7 @@
 //   }
 //   try {
 //     // Initialize the Gemini SDK using server-side env variable
-//     const ai = new GoogleGenAI({ apiKey: 'AIzaSyCumpe0vzMkS_FoVHPri1M1UMPlmqD6RLg' });
+//     const ai = new GoogleGenAI({ apiKey: '' });
 //     // Execute forensic sweep using Gemini 3 Pro
 //     const response = await ai.models.generateContent({
 //       model: 'gemini-3-flash-preview',
@@ -117,7 +117,7 @@ const app = express();
 // ✅ MUST use Render-provided PORT
 const PORT = process.env.PORT || 3000;
 // ✅ Secrets from environment variables
-const VOXGUARD_SECRET_KEY = "sk_voxguard_secure_key_2025";
+const VOXGUARD_SECRET_KEY = "sk_voxguard_secure_key_2026";
 const GEMINI_API_KEY = process.env.GEMINI_API_KEY;
 // Middleware
 app.use(cors());
