@@ -1,0 +1,24 @@
+{
+  "name": "voxguard-api",
+  "version": "1.0.0",
+  "description": "Forensic audio analysis API using Gemini 3 Flash",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node --watch index.js"
+  },
+  "keywords": [
+    "express",
+    "gemini-ai",
+    "audio-analysis",
+    "forensics"
+  ],
+  "author": "Tejashvar K R",
+  "license": "ISC",
+  "dependencies": {
+    "@google/genai": "^0.21.0",
+    "cors": "^2.8.5",
+    "express": "^4.21.2"
+  }
+}
