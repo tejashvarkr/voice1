@@ -118,7 +118,7 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 // ✅ Secrets from environment variables
 const VOXGUARD_SECRET_KEY = "sk_voxguard_secure_key_2025";
-const GEMINI_API_KEY = "AIzaSyCumpe0vzMkS_FoVHPri1M1UMPlmqD6RLg";
+const GEMINI_API_KEY = process.env.GEMINI_API_KEY;
 // Middleware
 app.use(cors());
 app.use(express.json({ limit: "50mb" }));
@@ -142,7 +142,7 @@ app.post("/api/voice-detection", async (req, res) => {
         });
     }
     try {
-        const ai = new GoogleGenAI({ apiKey: 'AIzaSyCumpe0vzMkS_FoVHPri1M1UMPlmqD6RLg' });
+        const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY; });
         const response = await ai.models.generateContent({
             model: "gemini-3-flash-preview",
             contents: {
